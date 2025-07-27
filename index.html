@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Basic Information Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      padding: 20px;
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+    form {
+      background: #c89595;
+      padding: 25px;
+      border-radius: 10px;
+      max-width: 500px;
+      margin: 0 auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .radio-group,
+    .checkbox-group {
+      margin-top: 5px;
+    }
+    .form-buttons {
+      margin-top: 20px;
+      text-align: center;
+    }
+    input[type="submit"],
+    input[type="reset"] {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      margin: 5px;
+      cursor: pointer;
+    }
+    input[type="submit"] {
+      background-color: #28a745;
+      color: rgb(247, 242, 242);
+    }
+    input[type="reset"] {
+      background-color: #dc3545;
+      color: rgb(243, 239, 239);
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Basic Information Form</h2>
+
+  <form>
+    <!-- Name -->
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <!-- Mobile Number -->
+    <label for="mobile">Mobile No:</label>
+    <input type="number" id="mobile" name="mobile" required>
+
+    <!-- Email Address -->
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" required>
+
+    <!-- Gender -->
+    <label>Gender:</label>
+    <div class="radio-group">
+      <input type="radio" id="male" name="gender" value="Male">
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="Female">
+      <label for="female">Female</label>
+      <input type="radio" id="other" name="gender" value="Other">
+      <label for="other">Other</label>
+    </div>
+
+    <!-- Education -->
+    <label>Education Done:</label>
+    <div class="checkbox-group">
+      <input type="checkbox" id="highschool" name="education" value="High School">
+      <label for="highschool">High School</label><br>
+      <input type="checkbox" id="bachelors" name="education" value="Bachelor's">
+      <label for="bachelors">Bachelor's</label><br>
+      <input type="checkbox" id="masters" name="education" value="Master's">
+      <label for="masters">Master's</label>
+    </div>
+
+    <!-- Do you like tea? -->
+    <label for="tea">Do you like tea?</label>
+    <select id="tea" name="tea">
+      <option value="">-- Select an option --</option>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+      <option value="Sometimes">Sometimes</option>
+    </select>
+
+    <!-- Buttons -->
+    <div class="form-buttons">
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset">
+    </div>
+  </form>
+
+</body>
+</html>
